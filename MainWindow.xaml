@@ -1,0 +1,19 @@
+﻿<Window x:Class="ModuleApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ModuleApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Label Content="School App" HorizontalAlignment="Left" Margin="18,8,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnEnterM" Content="ENTER NEW MODULE" HorizontalAlignment="Left" Margin="286,70,0,0" VerticalAlignment="Top" Width="175" Click="enterModule"/>
+        <Button x:Name="btnDisplay" Content="DISPLAY MODULE - SELF STUDY HOURS" HorizontalAlignment="Left" Margin="286,154,0,0" VerticalAlignment="Top" Width="175" Click="display"/>
+        <Button x:Name="btnStudyH" Content="RECORD STUDY HOURS" HorizontalAlignment="Left" Margin="286,182,0,0" VerticalAlignment="Top" Width="175" Click="study"/>
+        <Button x:Name="btnRemaining" Content="DISPLAY REMAINMING HOURS" HorizontalAlignment="Left" Margin="286,210,0,0" VerticalAlignment="Top" Width="175" Click="remaining"/>
+        <Button x:Name="btnExit" Content="EXIT" HorizontalAlignment="Left" Margin="286,238,0,0" VerticalAlignment="Top" Width="175" Click="exit"/>
+        <Button Content="PRINT " HorizontalAlignment="Left" Margin="625,80,0,0" VerticalAlignment="Top" Width="79" Click="print"/>
+
+    </Grid>
+</Window>

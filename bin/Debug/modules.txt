@@ -1,0 +1,14 @@
+MODULE DETAILS:
+Module Code: PROG5112, Name: PROGRAMMING1A, Credits: 12, Class Hours: 1
+Date:2/1/2020 12:00:00 AM 
+Hours: 1
+SEMESTER DETAILS:
+Weeks: 2, Date: 2023-03-03
+====================
+MODULE DETAILS:
+Module Code: DIAL21, Name: DIGUTA, Credits: 2, Class Hours: 1
+Date:2/3/2024 12:00:00 AM 
+Hours: 1
+SEMESTER DETAILS:
+Weeks: 1, Date: 2023-06-25
+====================

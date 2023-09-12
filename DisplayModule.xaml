@@ -1,0 +1,15 @@
+﻿<Window x:Class="ModuleApp.DisplayModule"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ModuleApp"
+        mc:Ignorable="d"
+        Title="DisplayModule" Height="450" Width="800">
+    <Grid>
+        <TextBlock x:Name="blkDisplay" HorizontalAlignment="Left" Margin="118,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="274" Width="514" Background="Black" Foreground="White"/>
+        <Button x:Name="btnDisplay" Content="DISPLAY" HorizontalAlignment="Left" Margin="523,40,0,0" VerticalAlignment="Top" Width="109" Click="display"/>
+        <Button x:Name="brnBack" Content="BACK" HorizontalAlignment="Left" Margin="118,392,0,0" VerticalAlignment="Top" Width="86" Click="back"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,22 @@
+﻿<Window x:Class="ModuleApp.RecordStudy"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ModuleApp"
+        mc:Ignorable="d"
+        Title="RecordStudy" Height="450" Width="800">
+    <Grid>
+        <Label Content="RECORD HOURS" HorizontalAlignment="Left" Margin="13,10,0,0" VerticalAlignment="Top" Width="141"/>
+        <Label Content="ENTER MODULE CODE " HorizontalAlignment="Left" Margin="13,66,0,0" VerticalAlignment="Top" Width="141"/>
+        <TextBox x:Name="txtCode" HorizontalAlignment="Center" Margin="0,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="151"/>
+        <Button x:Name="btnSearch" Content="SEARCH" HorizontalAlignment="Left" Margin="578,74,0,0" VerticalAlignment="Top" Width="107" Click="search"/>
+        <Label Content="ENTER  STUDY HOURS OF THE DAY" HorizontalAlignment="Left" Margin="15,175,0,0" VerticalAlignment="Top" Width="221"/>
+        <Label Content="ENTER DATE (YYYY-MM-DD)" HorizontalAlignment="Left" Margin="13,125,0,0" VerticalAlignment="Top" Width="180"/>
+        <TextBox x:Name="txtDate" HorizontalAlignment="Center" Margin="0,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152"/>
+        <TextBox x:Name="txtHours" HorizontalAlignment="Center" Margin="0,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152"/>
+        <Button x:Name="btnSave" Content="SAVE" HorizontalAlignment="Left" Margin="578,284,0,0" VerticalAlignment="Top" Width="107" Click="save"/>
+        <Button x:Name="btnBack" Content="BACK" HorizontalAlignment="Left" Margin="46,284,0,0" VerticalAlignment="Top" Width="107" Click="back"/>
+
+    </Grid>
+</Window>

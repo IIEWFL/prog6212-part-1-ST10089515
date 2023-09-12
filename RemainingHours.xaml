@@ -1,0 +1,21 @@
+﻿<Window x:Class="ModuleApp.RemainingHours"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ModuleApp"
+        mc:Ignorable="d"
+        Title="RemainingHours" Height="450" Width="800">
+    <Grid>
+        <Label Content="REMAINING HOURS" HorizontalAlignment="Left" Margin="8,3,0,0" VerticalAlignment="Top" Width="182"/>
+        <Label Content="ENTER MOUDLE CODE" HorizontalAlignment="Left" Margin="8,59,0,0" VerticalAlignment="Top" Width="182"/>
+        <Label Content="ENTER CURRENT DATE " HorizontalAlignment="Left" Margin="8,115,0,0" VerticalAlignment="Top" Width="182"/>
+        <TextBox x:Name="txtCode" HorizontalAlignment="Left" Margin="259,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="141"/>
+        <TextBox x:Name="txtDate" HorizontalAlignment="Left" Margin="259,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="141"/>
+        <Button x:Name="btnSearch" Content="SEARCH" HorizontalAlignment="Left" Margin="578,63,0,0" VerticalAlignment="Top" Width="107" Click="btnSearch_Click"/>
+        <Button x:Name="btnDisplay" Content="DISPLAY" HorizontalAlignment="Left" Margin="578,133,0,0" VerticalAlignment="Top" Width="107" Click="display"/>
+        <Button x:Name="btnBack" Content="BACK" HorizontalAlignment="Left" Margin="18,343,0,0" VerticalAlignment="Top" Width="107" Click="back"/>
+        <TextBlock x:Name="blkDisplay" HorizontalAlignment="Left" Margin="259,217,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="179" Width="304"/>
+
+    </Grid>
+</Window>
