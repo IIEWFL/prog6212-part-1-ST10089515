@@ -7,12 +7,17 @@ namespace ModuleApp
 {
     public partial class ModuleDetails : Window
     {
-        public Module module;
+        private Functions functions;
+        public string ModuleCode { get; private set; }
+        public int ModuleCredits { get; private set; }
+        public int ModuleClassHours { get; private set; }
+
+        public string ModuleName { get; private set; }  
 
         public ModuleDetails()
         {
             InitializeComponent();
-            module = new Module();
+            functions = new Functions();
         }
 
         private void next(object sender, RoutedEventArgs e)
@@ -21,29 +26,48 @@ namespace ModuleApp
 
 
             string code = txtCode.Text;
+             functions.module.Code= code;
             string name = txtName.Text;
+             functions.module.Name = name;
             int credits = int.Parse(txtCredits.Text);
+           functions.module.Credits = credits;
             int classHours = int.Parse(txtHours.Text);
+           functions.module.ClassHoursPerWeek = classHours;
 
             // Add the module to the modules list using the AddModule method
-            module.AddModule(name, code, credits, classHours);
+            functions.module.AddModule(name, code, credits, classHours);
+
+            ModuleCode = code;
+            ModuleName = name;
+            ModuleCredits = credits;
+            ModuleClassHours = classHours;
+
+
+
+
+
+
+
+
+
             string filePath = "modules.txt";
             using (StreamWriter writer = new StreamWriter(filePath, true))
             {
                 writer.WriteLine("MODULE DETAILS:");
                 writer.WriteLine("Module Code: " + code + ", Name: " + name + ", Credits: " + credits + ", Class Hours: " + classHours);
+               // writer.WriteLine("=====================================================================================================");
 
             }
 
 
 
             // Clear the StudyHoursPerDay list (assuming this is your intention)
-            module.StudyHoursPerDay = new List<double>();
+            functions.module.StudyHoursPerDay = new List<double>();
 
             MessageBox.Show("Module Added!");
 
             // Optionally, navigate to the next window
-            SemesterDetails details = new SemesterDetails();
+            SemesterDetails details = new SemesterDetails(this);
             this.Visibility = Visibility.Hidden;
             details.Show();
 

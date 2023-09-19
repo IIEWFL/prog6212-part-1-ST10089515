@@ -6,12 +6,12 @@ namespace ModuleApp
 {
     public partial class DisplayModule : Window
     {
-        public Module Module;
+        private Functions functions;
 
         public DisplayModule()
         {
             InitializeComponent();
-            Module = new Module();
+            functions = new Functions();
         }
 
         private void display(object sender, RoutedEventArgs e)

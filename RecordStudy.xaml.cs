@@ -8,12 +8,12 @@ namespace ModuleApp
 {
     public partial class RecordStudy : Window
     {
-        public Module Module;
+        private Functions functions;
 
         public RecordStudy()
         {
             InitializeComponent();
-            Module = new Module();
+            functions = new Functions();
         }
 
         private void search(object sender, RoutedEventArgs e)
@@ -88,7 +88,7 @@ namespace ModuleApp
             mainWindow.Show();
         }
 
-        private void save(object sender, RoutedEventArgs e)
+       private void save(object sender, RoutedEventArgs e)
         {
 
             string filePath = "modules.txt";
@@ -120,6 +120,12 @@ namespace ModuleApp
                     // Write the updated lines back to the file
                     File.WriteAllLines(filePath, updatedLines);
 
+
+
+
+
+
+
                     MessageBox.Show($"Date and Hours added for Module with Code: {codeToUpdate}");
                     break;
                 }
@@ -135,5 +141,7 @@ namespace ModuleApp
 
 
         }
+
+
     }
 }

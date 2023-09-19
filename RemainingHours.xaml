@@ -7,15 +7,21 @@
         mc:Ignorable="d"
         Title="RemainingHours" Height="450" Width="800">
     <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="White" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <Label Content="REMAINING HOURS" HorizontalAlignment="Left" Margin="8,3,0,0" VerticalAlignment="Top" Width="182"/>
         <Label Content="ENTER MOUDLE CODE" HorizontalAlignment="Left" Margin="8,59,0,0" VerticalAlignment="Top" Width="182"/>
         <Label Content="ENTER CURRENT DATE " HorizontalAlignment="Left" Margin="8,115,0,0" VerticalAlignment="Top" Width="182"/>
         <TextBox x:Name="txtCode" HorizontalAlignment="Left" Margin="259,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="141"/>
         <TextBox x:Name="txtDate" HorizontalAlignment="Left" Margin="259,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="141"/>
-        <Button x:Name="btnSearch" Content="SEARCH" HorizontalAlignment="Left" Margin="578,63,0,0" VerticalAlignment="Top" Width="107" Click="btnSearch_Click"/>
+        <Button x:Name="btnSearch" Content="SEARCH" HorizontalAlignment="Left" Margin="578,63,0,0" VerticalAlignment="Top" Width="107" Click="search"/>
         <Button x:Name="btnDisplay" Content="DISPLAY" HorizontalAlignment="Left" Margin="578,133,0,0" VerticalAlignment="Top" Width="107" Click="display"/>
         <Button x:Name="btnBack" Content="BACK" HorizontalAlignment="Left" Margin="18,343,0,0" VerticalAlignment="Top" Width="107" Click="back"/>
-        <TextBlock x:Name="blkDisplay" HorizontalAlignment="Left" Margin="259,217,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="179" Width="304"/>
+        <TextBlock x:Name="blkDisplay" HorizontalAlignment="Left" Margin="259,217,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="179" Width="304" Background="Black" Foreground="#FFEDE5E5"/>
 
     </Grid>
 </Window>

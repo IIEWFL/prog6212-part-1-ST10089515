@@ -58,6 +58,7 @@
     <Compile Include="DisplayModule.xaml.cs">
       <DependentUpon>DisplayModule.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Functions.cs" />
     <Compile Include="RecordStudy.xaml.cs">
       <DependentUpon>RecordStudy.xaml</DependentUpon>
     </Compile>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
@@ -8,12 +9,12 @@ namespace ModuleApp
 {
     public partial class RemainingHours : Window
     {
-        public Module Module;
+        private Functions functions;
 
         public RemainingHours()
         {
             InitializeComponent();
-            Module = new Module();
+           functions = new Functions();
         }
 
         private void back(object sender, RoutedEventArgs e)
@@ -29,7 +30,7 @@ namespace ModuleApp
 
         private void display(object sender, RoutedEventArgs e)
         {    // Calculate and display remaining self-study hours for each module
-
+            /**
             DateTime today = DateTime.Today;
             DateTime startOfWeek = today.AddDays(-(int)today.DayOfWeek);
 
@@ -55,8 +56,50 @@ namespace ModuleApp
 
                 // Display information in the TextBlock
                 blkDisplay.Text += $"Module Code: {module.Code}, Name: {module.Name}, Remaining self-study hours this week: {remainingHoursThisWeek}\n";
+            }**/
+
+
+
+        }
+
+        private void search(object sender, RoutedEventArgs e)
+        {
+            string filePath = "modules.txt";
+            string searchCode = txtCode.Text;
+
+            // Read all lines from the file
+            string[] lines = File.ReadAllLines(filePath);
+
+            bool found = false;
+
+            // Iterate through the lines and check for the search code
+            foreach (string line in lines)
+            {
+                if (line.Contains($"Module Code: {searchCode}"))
+                {
+                    found = true;
+                    break;
+                }
             }
-        } 
+
+            // Display a message based on whether the code was found or not
+            if (found)
+            {
+                MessageBox.Show($"Module Code: {searchCode} found in the 'modules.txt' file.");
+
+
+
+
+
+
+
+
+            }
+            else
+            {
+                MessageBox.Show($"Module Code: {searchCode} not found in the 'modules.txt' file.");
+            }
+        }
     }
     
 }
