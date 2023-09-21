@@ -20,3 +20,23 @@ MODULE DETAILS:
 Module Code: prog, Name: programming, Credits: 2, Class Hours: 1
 Required Self Study Hours:NaN
 =====================================================================================================
+MODULE DETAILS:
+Module Code: Kop, Name: Kopano, Credits: 2, Class Hours: 2
+Required Self Study Hours:NaN
+=====================================================================================================
+MODULE DETAILS:
+Module Code: Kop, Name: Naitrh, Credits: 1, Class Hours: 1
+Required Self Study Hours:NaN
+=====================================================================================================
+MODULE DETAILS:
+Module Code: , Name: mklmk1, Credits: 0, Class Hours: 0
+Required Self Study Hours:∞
+=====================================================================================================
+MODULE DETAILS:
+Module Code: , Name: Naith, Credits: 0, Class Hours: 0
+Required Self Study Hours:∞
+=====================================================================================================
+MODULE DETAILS:
+Module Code: , Name: kOPANO, Credits: 0, Class Hours: 0
+Required Self Study Hours:8
+=====================================================================================================
