@@ -10,11 +10,30 @@ namespace ModuleApp
     public partial class RemainingHours : Window
     {
         private Functions functions;
+        private RecordStudy recordStudy;
+        public DateTime DateValue { get; set; }
 
-        public RemainingHours()
+        public RemainingHours() { 
+        
+        
+        
+        
+        }
+
+
+        public RemainingHours(RecordStudy recordStudy)
         {
+            this.recordStudy = recordStudy;
             InitializeComponent();
            functions = new Functions();
+           // DateTime startDate = RecordStudy.date;
+
+
+
+
+
+
+
         }
 
         private void back(object sender, RoutedEventArgs e)
@@ -67,26 +86,32 @@ namespace ModuleApp
             string filePath = "modules.txt";
             string searchCode = txtCode.Text;
 
-            // Read all lines from the file
-            string[] lines = File.ReadAllLines(filePath);
+            string dateStr = txtDate.Text;
+            DateTime date;
 
-            bool found = false;
+         
 
-            // Iterate through the lines and check for the search code
-            foreach (string line in lines)
-            {
-                if (line.Contains($"Module Code: {searchCode}"))
+               
+
+
+                string[] lines = File.ReadAllLines(filePath);
+
+                bool found = false;
+
+                // Iterate through the lines and check for the search code
+                foreach (string line in lines)
                 {
-                    found = true;
-                    break;
+                    if (line.Contains($"Module Code: {searchCode}"))
+                    {
+                        found = true;
+                        break;
+                    }
                 }
-            }
 
-            // Display a message based on whether the code was found or not
-            if (found)
-            {
-                MessageBox.Show($"Module Code: {searchCode} found in the 'modules.txt' file.");
-
+                // Display a message based on whether the code was found or not
+                if (found)
+                {
+                    MessageBox.Show($"Module Code: {searchCode} found in the 'modules.txt' file.");
 
 
 
@@ -94,11 +119,17 @@ namespace ModuleApp
 
 
 
-            }
-            else
-            {
-                MessageBox.Show($"Module Code: {searchCode} not found in the 'modules.txt' file.");
-            }
+
+                }
+                else
+                {
+                    MessageBox.Show($"Module Code: {searchCode} not found in the 'modules.txt' file.");
+                }
+            
+           
+
+            // Read all lines from the file
+         
         }
     }
     

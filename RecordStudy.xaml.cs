@@ -9,12 +9,25 @@ namespace ModuleApp
     public partial class RecordStudy : Window
     {
         private Functions functions;
+        private RemainingHours RemainingHours;
 
-        public RecordStudy()
+        public string Date { get; private set; }
+
+        public RecordStudy(RemainingHours remainingHours)
         {
             InitializeComponent();
             functions = new Functions();
         }
+
+
+        public RecordStudy() { 
+        
+        
+        
+        
+        }
+
+
 
         private void search(object sender, RoutedEventArgs e)
         {
@@ -41,14 +54,14 @@ namespace ModuleApp
             // Display the result
             if (found)
             {
-                MessageBox.Show($"The value '{searchValue}' was found in the 'modules.txt' file.");
+                MessageBox.Show($"The value '{searchValue}' was found.");
             }
             else
             {
-                MessageBox.Show($"The value '{searchValue}' was not found in the 'modules.txt' file.");
+                MessageBox.Show($"The value '{searchValue}' was not found.");
             }
 
-            // Display the result
+           /** // Display the result
 
 
             //    string searchCode = txtCode.Text;
@@ -78,7 +91,7 @@ namespace ModuleApp
             //            return module;
             //        }
             //    }
-            //    return null;
+            //    return null;**/
         }
 
         private void back(object sender, RoutedEventArgs e)
@@ -100,6 +113,8 @@ namespace ModuleApp
 
             var date = DateTime.Parse(txtDate.Text);
 
+             date= DateTime.Parse(Date);
+
             double hours = double.Parse(txtHours.Text);
 
 
@@ -120,6 +135,9 @@ namespace ModuleApp
                     // Write the updated lines back to the file
                     File.WriteAllLines(filePath, updatedLines);
 
+                    txtDate.Text = "";
+                    txtHours.Text = "";
+                    txtCode.Text = "";
 
 
 

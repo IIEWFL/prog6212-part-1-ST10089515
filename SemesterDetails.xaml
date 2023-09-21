@@ -7,11 +7,25 @@
         mc:Ignorable="d"
         Title="SemesterDetails" Height="450" Width="800">
     <Grid>
-        <Label Content="Semester Details" HorizontalAlignment="Left" Margin="23,19,0,0" VerticalAlignment="Top" Width="111"/>
-        <Label Content="ENTER NUMBER OF WEEKS" HorizontalAlignment="Left" Margin="23,107,0,0" VerticalAlignment="Top" Width="155"/>
-        <Label Content=" START DATE " HorizontalAlignment="Left" Margin="23,140,0,0" VerticalAlignment="Top" Width="155"/>
-        <Button x:Name="btnBack" Content="BACK" HorizontalAlignment="Left" Margin="311,288,0,0" VerticalAlignment="Top" Width="100" Click="back"/>
-        <Button x:Name="btnSave" Content="ENTER" HorizontalAlignment="Left" Margin="628,198,0,0" VerticalAlignment="Top" Width="117" Click="save" Height="23"/>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="White" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Label Content="Semester Details" HorizontalAlignment="Left" Margin="23,19,0,0" VerticalAlignment="Top" Width="246" FontSize="32" Foreground="#FFF9EDED"/>
+        <Label Content="ENTER NUMBER OF WEEKS" HorizontalAlignment="Left" Margin="23,107,0,0" VerticalAlignment="Top" Width="155" Foreground="#FFEFE2E2"/>
+        <Label Content=" START DATE " HorizontalAlignment="Left" Margin="23,140,0,0" VerticalAlignment="Top" Width="155" Foreground="#FFEFE2E2"/>
+        <Button x:Name="btnBack" Content="BACK" HorizontalAlignment="Left" Margin="23,206,0,0" VerticalAlignment="Top" Width="100" Click="back" Foreground="#FFF9F2F2">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnSave" Content="ENTER" HorizontalAlignment="Left" Margin="628,198,0,0" VerticalAlignment="Top" Width="117" Click="save" Height="23" Foreground="#FFF9F2F2">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
         <TextBox x:Name="txtWeeks" HorizontalAlignment="Left" Margin="590,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="155"/>
         <TextBox x:Name="txtDate" HorizontalAlignment="Left" Margin="590,153,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="155"/>
 

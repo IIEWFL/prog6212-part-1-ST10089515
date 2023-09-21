@@ -7,17 +7,31 @@
         mc:Ignorable="d"
         Title="ModuleDetails" Height="450" Width="800">
     <Grid>
-        <Label Content="ENTER MODULE DETAILS" HorizontalAlignment="Left" Margin="17,9,0,0" VerticalAlignment="Top" Width="189"/>
-        <Label Content="MODULE CODE" HorizontalAlignment="Left" Margin="17,53,0,0" VerticalAlignment="Top" Width="189"/>
-        <Label Content="MODULE NAME" HorizontalAlignment="Left" Margin="17,86,0,0" VerticalAlignment="Top" Width="189"/>
-        <Label Content="MODULE CREDITS" HorizontalAlignment="Left" Margin="17,119,0,0" VerticalAlignment="Top" Width="189"/>
-        <Label Content="CLASS HOURS " HorizontalAlignment="Left" Margin="17,152,0,0" VerticalAlignment="Top" Width="189"/>
-        <TextBox x:Name="txtCode" HorizontalAlignment="Left" Margin="310,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177"/>
-        <TextBox x:Name="txtName" HorizontalAlignment="Left" Margin="310,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177"/>
-        <TextBox x:Name="txtCredits" HorizontalAlignment="Left" Margin="310,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177"/>
-        <TextBox x:Name="txtHours" HorizontalAlignment="Left" Margin="310,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177"/>
-        <Button x:Name="btnBack" Content="BACK" HorizontalAlignment="Left" Margin="89,310,0,0" VerticalAlignment="Top" Width="71" Click="back"/>
-        <Button x:Name="btnNext" Content="SAVE -NEXT" HorizontalAlignment="Left" Margin="585,310,0,0" VerticalAlignment="Top" Width="85" Click="next"/>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="White" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Label Content="ENTER MODULE DETAILS" HorizontalAlignment="Left" Margin="17,9,0,0" VerticalAlignment="Top" Width="202" Foreground="#FFF5E8E8"/>
+        <Label Content="MODULE CODE" HorizontalAlignment="Left" Margin="17,109,0,0" VerticalAlignment="Top" Width="189" Foreground="#FFF1F0F0"/>
+        <Label Content="MODULE NAME" HorizontalAlignment="Left" Margin="17,142,0,0" VerticalAlignment="Top" Width="189" Foreground="#FFF1F0F0"/>
+        <Label Content="MODULE CREDITS" HorizontalAlignment="Left" Margin="17,175,0,0" VerticalAlignment="Top" Width="189" Foreground="#FFF1F0F0"/>
+        <Label Content="CLASS HOURS " HorizontalAlignment="Left" Margin="17,208,0,0" VerticalAlignment="Top" Width="189" Foreground="#FFF1F0F0"/>
+        <TextBox x:Name="txtCode" HorizontalAlignment="Left" Margin="310,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177"/>
+        <TextBox x:Name="txtName" HorizontalAlignment="Left" Margin="310,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177"/>
+        <TextBox x:Name="txtCredits" HorizontalAlignment="Left" Margin="310,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177"/>
+        <TextBox x:Name="txtHours" HorizontalAlignment="Left" Margin="310,221,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177"/>
+        <Button x:Name="btnBack" Content="BACK" HorizontalAlignment="Left" Margin="33,310,0,0" VerticalAlignment="Top" Width="71" Click="back" Foreground="#FFF9F0F0">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnNext" Content="SAVE -NEXT" HorizontalAlignment="Left" Margin="585,310,0,0" VerticalAlignment="Top" Width="85" Click="next" Foreground="#FFF9F0F0">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
 
     </Grid>
 </Window>

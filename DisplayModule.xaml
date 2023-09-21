@@ -7,9 +7,33 @@
         mc:Ignorable="d"
         Title="DisplayModule" Height="450" Width="800">
     <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="White" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <TextBlock x:Name="blkDisplay" HorizontalAlignment="Left" Margin="118,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="274" Width="514" Background="Black" Foreground="White"/>
-        <Button x:Name="btnDisplay" Content="DISPLAY" HorizontalAlignment="Left" Margin="523,40,0,0" VerticalAlignment="Top" Width="109" Click="display"/>
-        <Button x:Name="brnBack" Content="BACK" HorizontalAlignment="Left" Margin="118,392,0,0" VerticalAlignment="Top" Width="86" Click="back"/>
+        <Button x:Name="btnDisplay" Content="View Modules&#xD;&#xA;" HorizontalAlignment="Left" Margin="523,40,0,0" VerticalAlignment="Top" Width="109" Click="display" Foreground="#FFF1E9E9" Height="24">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="brnBack" Content="BACK" HorizontalAlignment="Left" Margin="118,392,0,0" VerticalAlignment="Top" Width="86" Click="back">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+        <Label Content="Display Module" HorizontalAlignment="Left" Margin="48,9,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="279" Foreground="White" FontSize="32">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.576"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
 
     </Grid>
 </Window>

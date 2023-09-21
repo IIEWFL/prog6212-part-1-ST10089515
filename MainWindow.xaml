@@ -7,13 +7,39 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Label Content="School App" HorizontalAlignment="Left" Margin="18,8,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnEnterM" Content="ENTER NEW MODULE" HorizontalAlignment="Left" Margin="286,70,0,0" VerticalAlignment="Top" Width="175" Click="enterModule"/>
-        <Button x:Name="btnDisplay" Content="DISPLAY MODULE - SELF STUDY HOURS" HorizontalAlignment="Left" Margin="286,154,0,0" VerticalAlignment="Top" Width="175" Click="display"/>
-        <Button x:Name="btnStudyH" Content="RECORD STUDY HOURS" HorizontalAlignment="Left" Margin="286,182,0,0" VerticalAlignment="Top" Width="175" Click="study"/>
-        <Button x:Name="btnRemaining" Content="DISPLAY REMAINMING HOURS" HorizontalAlignment="Left" Margin="286,210,0,0" VerticalAlignment="Top" Width="175" Click="remaining"/>
-        <Button x:Name="btnExit" Content="EXIT" HorizontalAlignment="Left" Margin="286,238,0,0" VerticalAlignment="Top" Width="175" Click="exit"/>
-        <Button Content="PRINT " HorizontalAlignment="Left" Margin="625,80,0,0" VerticalAlignment="Top" Width="79" Click="print"/>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="White" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Label Content="School App" HorizontalAlignment="Left" Margin="18,8,0,0" VerticalAlignment="Top" FontFamily="Arial Black" FontSize="32" Foreground="#FFF9F0F0"/>
+        <Button x:Name="btnEnterM" Content="ENTER NEW MODULE" HorizontalAlignment="Left" Margin="286,126,0,0" VerticalAlignment="Top" Width="175" Click="enterModule">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnDisplay" Content="DISPLAY MODULE - SELF STUDY HOURS" HorizontalAlignment="Left" Margin="286,182,0,0" VerticalAlignment="Top" Width="175" Click="display">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnStudyH" Content="RECORD STUDY HOURS" HorizontalAlignment="Left" Margin="286,210,0,0" VerticalAlignment="Top" Width="175" Click="study">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnRemaining" Content="DISPLAY REMAINMING HOURS" HorizontalAlignment="Left" Margin="286,238,0,0" VerticalAlignment="Top" Width="175" Click="remaining">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnExit" Content="EXIT" HorizontalAlignment="Left" Margin="286,266,0,0" VerticalAlignment="Top" Width="175" Click="exit" Background="#FFF92525" Foreground="#FFEFE4E4"/>
+        <Button x:Name="btnSemester" Content="ADD SEMESTER&#xD;&#xA;" HorizontalAlignment="Left" Margin="286,154,0,0" VerticalAlignment="Top" Width="175" Click="enterSemester" Height="23">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
 
     </Grid>
 </Window>

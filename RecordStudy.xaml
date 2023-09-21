@@ -7,16 +7,34 @@
         mc:Ignorable="d"
         Title="RecordStudy" Height="450" Width="800">
     <Grid>
-        <Label Content="RECORD HOURS" HorizontalAlignment="Left" Margin="13,10,0,0" VerticalAlignment="Top" Width="141"/>
-        <Label Content="ENTER MODULE CODE " HorizontalAlignment="Left" Margin="13,66,0,0" VerticalAlignment="Top" Width="141"/>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="White" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Label Content="RECORD HOURS" HorizontalAlignment="Left" Margin="13,10,0,0" VerticalAlignment="Top" Width="245" Foreground="#FFFBF1F1" FontSize="30"/>
+        <Label Content="ENTER MODULE CODE " HorizontalAlignment="Left" Margin="13,66,0,0" VerticalAlignment="Top" Width="141" Foreground="#FFFBF1F1"/>
         <TextBox x:Name="txtCode" HorizontalAlignment="Center" Margin="0,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="151"/>
-        <Button x:Name="btnSearch" Content="SEARCH" HorizontalAlignment="Left" Margin="578,74,0,0" VerticalAlignment="Top" Width="107" Click="search"/>
-        <Label Content="ENTER  STUDY HOURS OF THE DAY" HorizontalAlignment="Left" Margin="15,175,0,0" VerticalAlignment="Top" Width="221"/>
-        <Label Content="ENTER DATE (YYYY-MM-DD)" HorizontalAlignment="Left" Margin="13,125,0,0" VerticalAlignment="Top" Width="180"/>
+        <Button x:Name="btnSearch" Content="SEARCH" HorizontalAlignment="Left" Margin="578,74,0,0" VerticalAlignment="Top" Width="107" Click="search" Foreground="#FFFBEDED">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+        <Label Content="ENTER  STUDY HOURS OF THE DAY" HorizontalAlignment="Left" Margin="15,175,0,0" VerticalAlignment="Top" Width="221" Foreground="#FFFBF1F1"/>
+        <Label Content="ENTER DATE (YYYY-MM-DD)" HorizontalAlignment="Left" Margin="13,125,0,0" VerticalAlignment="Top" Width="180" Foreground="#FFFBF1F1"/>
         <TextBox x:Name="txtDate" HorizontalAlignment="Center" Margin="0,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152"/>
         <TextBox x:Name="txtHours" HorizontalAlignment="Center" Margin="0,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152"/>
-        <Button x:Name="btnSave" Content="SAVE" HorizontalAlignment="Left" Margin="578,284,0,0" VerticalAlignment="Top" Width="107" Click="save"/>
-        <Button x:Name="btnBack" Content="BACK" HorizontalAlignment="Left" Margin="46,284,0,0" VerticalAlignment="Top" Width="107" Click="back"/>
+        <Button x:Name="btnSave" Content="SAVE" HorizontalAlignment="Left" Margin="578,284,0,0" VerticalAlignment="Top" Width="107" Click="save" Foreground="#FFF5F4F4">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnBack" Content="BACK" HorizontalAlignment="Left" Margin="46,284,0,0" VerticalAlignment="Top" Width="107" Click="back" Foreground="#FFF5E8E8">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
 
     </Grid>
 </Window>

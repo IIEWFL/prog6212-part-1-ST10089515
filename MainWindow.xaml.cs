@@ -81,6 +81,8 @@ namespace ModuleApp
 
         private void remaining(object sender, RoutedEventArgs e)
         {
+
+
             RemainingHours remainingHours = new RemainingHours();   
             this.Visibility = Visibility.Hidden;    
             remainingHours.Show();
@@ -88,6 +90,22 @@ namespace ModuleApp
 
         private void exit(object sender, RoutedEventArgs e)
         {
+            // Delete the "modules.txt" file
+            string modulesFilePath = "modules.txt";
+            if (File.Exists(modulesFilePath))
+            {
+                File.Delete(modulesFilePath);
+            }
+
+            // Delete the "semester.txt" file
+            string semesterFilePath = "semester.txt";
+            if (File.Exists(semesterFilePath))
+            {
+                File.Delete(semesterFilePath);
+            }
+
+            // Optionally, show a message to indicate that the files have been deleted
+            MessageBox.Show("Files have been deleted.");
             MainWindow mainWindow = new MainWindow();
             this.Visibility = Visibility.Hidden;
             mainWindow.Close();
@@ -97,6 +115,19 @@ namespace ModuleApp
         {
            // module.PrintModules();
 
+        }
+
+        private void clear(object sender, RoutedEventArgs e)
+        {
+           
+
+        }
+
+        private void enterSemester(object sender, RoutedEventArgs e)
+        {
+            SemesterDetails details = new SemesterDetails();
+            this.Visibility = Visibility.Hidden;
+            details.Show();
         }
     }
 }

@@ -1,3 +1,6 @@
+Weeks:2, Date: 3/18/2023 12:00:00 AM
+RemainingHours:9
+====================
 SEMESTER DETAILS:
-Weeks: 20, Date: 6/3/2023 12:00:00 AM
+Weeks: 2, Date: 3/3/2023 12:00:00 AM
 ====================
