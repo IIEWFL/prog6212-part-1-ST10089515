@@ -40,3 +40,7 @@ MODULE DETAILS:
 Module Code: , Name: kOPANO, Credits: 0, Class Hours: 0
 Required Self Study Hours:8
 =====================================================================================================
+MODULE DETAILS:
+Module Code: jab, Name: joooo, Credits: joooo, Class Hours: 1
+Required Self Study Hours:0
+=====================================================================================================
