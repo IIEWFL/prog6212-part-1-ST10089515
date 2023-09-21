@@ -11,11 +11,15 @@ namespace ModuleApp
     {
          // Initialize the module instance
 
+        private Functions functions;
+
+
         public MainWindow()
         {
             InitializeComponent();
+            functions = new Functions();
             // Example usage: Initialize the module instance with sample values
-           
+
         }
 
         private void enter(object sender, RoutedEventArgs e)
@@ -113,7 +117,7 @@ namespace ModuleApp
 
         private void print(object sender, RoutedEventArgs e)
         {
-           // module.PrintModules();
+           functions.module.PrintModules();
 
         }
 

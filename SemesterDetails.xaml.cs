@@ -55,7 +55,7 @@ namespace ModuleApp
         {
 
             int weeks = int.Parse(txtWeeks.Text);
-            functions.semester.numberofWeeks = weeks;
+           weeks = functions.semester.numberofWeeks ;
 
 
               DateTime dateString = DateTime.Parse(txtDate.Text);

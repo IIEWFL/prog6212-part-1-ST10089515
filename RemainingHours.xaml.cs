@@ -131,6 +131,18 @@ namespace ModuleApp
             // Read all lines from the file
          
         }
+
+        private void save(object sender, RoutedEventArgs e)
+        {
+           int date = int.Parse(txtDate.Text);
+           int kops = functions.module.ClassHoursPerWeek;
+
+           int final = kops - kops;
+           
+
+
+
+        }
     }
     
 }

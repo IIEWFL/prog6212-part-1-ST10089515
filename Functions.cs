@@ -17,7 +17,7 @@ namespace ModuleApp
         public Semester semester;
         public class Module
         {
-         
+
             // Properties for Module class
             public string Code { get; set; }
             public string Name { get; set; }
@@ -27,7 +27,7 @@ namespace ModuleApp
             public List<StudyRecord> StudyRecords { get; set; }
             public DateTime startDate = DateTime.MinValue;
 
-         
+
 
             // List to store multiple modules
             public List<Module> modules { get; set; } = new List<Module>();
@@ -81,16 +81,28 @@ namespace ModuleApp
             {
                 modules = new List<Module>(); // Initialize the list of modules
 
-                
+
             }
 
-          
+
 
             public class StudyRecord
             {
                 public double Hours { get; set; }
                 public DateTime Date { get; set; }
             }
+
+
+            public class Remaining  {
+            
+
+            
+            
+            
+            }
+
+
+
             public void SaveModulesToFile(string filePath)
             {
                 using (StreamWriter writer = new StreamWriter(filePath))

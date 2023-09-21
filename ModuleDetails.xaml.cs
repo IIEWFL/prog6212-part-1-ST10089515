@@ -23,25 +23,25 @@ namespace ModuleApp
         private void next(object sender, RoutedEventArgs e)
         {
 
+            string Mcode = txtCode.Text;
+            string Mname = txtName.Text;
+            int Mcredits = int.Parse(txtCredits.Text);
+            int MclassHours = int.Parse(txtHours.Text);
 
 
-            string code = txtCode.Text;
-             functions.module.Code= code;
-            string name = txtName.Text;
-             functions.module.Name = name;
-            int credits = int.Parse(txtCredits.Text);
-           functions.module.Credits = credits;
-            int classHours = int.Parse(txtHours.Text);
-           functions.module.ClassHoursPerWeek = classHours;
 
             // Add the module to the modules list using the AddModule method
-            functions.module.AddModule(name, code, credits, classHours);
+            functions.module.AddModule(Mname, Mcode, Mcredits, MclassHours);
 
-            ModuleCode = code;
-            ModuleName = name;
-            ModuleCredits = credits;
-            ModuleClassHours = classHours;
+            ModuleCode = Mcode;
+            ModuleName = Mname;
+            ModuleCredits = Mcredits;
+            ModuleClassHours = MclassHours;
 
+            ModuleCode = functions.module.Code;
+            ModuleCode = functions.module.Name;
+            ModuleCredits = functions.module.Credits;
+            ModuleClassHours = functions.module.ClassHoursPerWeek;
 
 
 
@@ -54,7 +54,7 @@ namespace ModuleApp
             using (StreamWriter writer = new StreamWriter(filePath, true))
             {
                 writer.WriteLine("MODULE DETAILS:");
-                writer.WriteLine("Module Code: " + code + ", Name: " + name + ", Credits: " + credits + ", Class Hours: " + classHours);
+                writer.WriteLine("Module Code: " + Mcode + ", Name: " + Mname + ", Credits: " + Mcredits + ", Class Hours: " + MclassHours);
                // writer.WriteLine("=====================================================================================================");
 
             }

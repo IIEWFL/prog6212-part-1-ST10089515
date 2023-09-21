@@ -12,3 +12,7 @@ MODULE DETAILS:
 Module Code: Prog, Name: Prgra, Credits: 1, Class Hours: 2
 MODULE DETAILS:
 Module Code: gw4hmo, Name: omimo, Credits: 1, Class Hours: 1
+MODULE DETAILS:
+Module Code: , Name: , Credits: 0, Class Hours: 0
+Required Self Study Hours:NaN
+=====================================================================================================
