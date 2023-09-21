@@ -20,11 +20,11 @@ namespace ModuleApp
         }
 
 
-        public RecordStudy() { 
-        
-        
-        
-        
+        public RecordStudy() {
+
+            InitializeComponent();
+
+
         }
 
 

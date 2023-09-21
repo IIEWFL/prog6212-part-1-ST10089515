@@ -28,6 +28,7 @@ namespace ModuleApp
 
         public SemesterDetails()
         {
+            InitializeComponent();
         }
 
         public SemesterDetails(ModuleDetails moduleDetails)

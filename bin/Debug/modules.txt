@@ -16,3 +16,7 @@ MODULE DETAILS:
 Module Code: , Name: , Credits: 0, Class Hours: 0
 Required Self Study Hours:NaN
 =====================================================================================================
+MODULE DETAILS:
+Module Code: prog, Name: programming, Credits: 2, Class Hours: 1
+Required Self Study Hours:NaN
+=====================================================================================================

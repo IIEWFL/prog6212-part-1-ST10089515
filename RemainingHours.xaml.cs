@@ -13,11 +13,11 @@ namespace ModuleApp
         private RecordStudy recordStudy;
         public DateTime DateValue { get; set; }
 
-        public RemainingHours() { 
-        
-        
-        
-        
+        public RemainingHours() {
+
+
+            InitializeComponent();
+
         }
 
 
