@@ -33,18 +33,10 @@ namespace ModuleApp
             else
             {
                 // If the file does not exist, display a message
-                blkDisplay.Text = "The 'modules.txt' file does not exist.";
+                blkDisplay.Text = "The file does not exist.";
             }
 
-            //MessageBox.Show("Display button clicked!");
-            //// Clear the existing text
-            //blkDisplay.Text = "";
-
-            //foreach (Module module in Module.modules)
-            //{
-            //    double selfStudyHours = module.SelfStudyHoursPerWeek(module.numberofWeeks);
-            //    blkDisplay.Text += $"Module Code: {module.Code}, Self-Study Hours: {selfStudyHours}\n";
-            //}
+          
         }
 
         private void back(object sender, RoutedEventArgs e)

@@ -23,6 +23,8 @@ namespace ModuleApp
     public partial class SemesterDetails : Window
     {
 
+      
+
         private Functions functions;
         private ModuleDetails moduleDetails;
 
@@ -46,8 +48,8 @@ namespace ModuleApp
         private void back(object sender, RoutedEventArgs e)
         {
 
-            ModuleDetails moduleDetails = new ModuleDetails();  
-            this.Visibility = Visibility.Hidden;
+            ModuleDetails moduleDetails = new ModuleDetails();
+            this.Visibility = Visibility.Collapsed;
             moduleDetails.Show();
 
         }
@@ -56,23 +58,13 @@ namespace ModuleApp
         {
 
             int weeks = int.Parse(txtWeeks.Text);
-           weeks = functions.semester.numberofWeeks ;
+            DateTime dateString = DateTime.Parse(txtDate.Text);
 
+            // Debugging information
+           
 
-              DateTime dateString = DateTime.Parse(txtDate.Text);
-
-             functions.semester.time = dateString; // Assuming functions.semester.date is a string
-                                                           //
-                                                           //DateTime time = DateTime.Parse(functions.semester.time); // Assuming functions.semester.time is a DateTime
-
-         
-
-            functions.semester.AddSemester( dateString, weeks);
-
-            double remaining = (moduleDetails.ModuleCredits * 10.0) / weeks - moduleDetails.ModuleClassHours;
-            //MessageBox.Show($"Remaining Self-Study Hours: {remaining}");
-
-
+            double remaining = moduleDetails.ModuleCredits * 10.0 / weeks - moduleDetails.ModuleClassHours;
+           
 
 
             string filePath = "modules.txt";
@@ -127,7 +119,7 @@ namespace ModuleApp
 
 
             MainWindow mainWindow = new MainWindow();
-            this.Visibility = Visibility.Hidden;
+            this.Visibility = Visibility.Collapsed;
             mainWindow.Show();
 
         }

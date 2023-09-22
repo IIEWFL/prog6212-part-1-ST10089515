@@ -28,7 +28,7 @@ namespace ModuleApp
 
             ModuleDetails moduleDetails = new ModuleDetails();
            // moduleDetails.module = this.module; // Pass the existing module instance
-            this.Visibility = Visibility.Hidden;
+            this.Visibility = Visibility.Collapsed;
             moduleDetails.Show();
             // module.numberofModules = int.Parse(txtNumber.Text);
 
@@ -48,7 +48,7 @@ namespace ModuleApp
         private void enterModule(object sender, RoutedEventArgs e)
         {
             ModuleDetails module = new ModuleDetails();
-            this.Visibility = Visibility.Hidden;
+            this.Visibility = Visibility.Collapsed;
             module.Show();
         }
 
@@ -57,7 +57,7 @@ namespace ModuleApp
         private void dur(object sender, RoutedEventArgs e)
         {
             SemesterDetails semesterDetails = new SemesterDetails();
-            this.Visibility = Visibility.Hidden;    
+            this.Visibility = Visibility.Collapsed;    
             semesterDetails.Show();
             MessageBox.Show("NB!,ENTER DATE IN FORMAT YYYY-MM-DD!");
         }
@@ -70,7 +70,7 @@ namespace ModuleApp
         private void display(object sender, RoutedEventArgs e)
         {
             DisplayModule display  = new DisplayModule();
-            this.Visibility = Visibility.Hidden;
+            this.Visibility = Visibility.Collapsed;
             display.Show(); 
 
         }
@@ -78,7 +78,7 @@ namespace ModuleApp
         private void study(object sender, RoutedEventArgs e)
         {
             RecordStudy recordStudy = new RecordStudy();
-            this.Visibility = Visibility.Hidden;
+            this.Visibility = Visibility.Collapsed;
             recordStudy.Show();
 
         }
@@ -88,7 +88,7 @@ namespace ModuleApp
 
 
             RemainingHours remainingHours = new RemainingHours();   
-            this.Visibility = Visibility.Hidden;    
+            this.Visibility = Visibility.Collapsed;    
             remainingHours.Show();
         }
 
@@ -109,10 +109,11 @@ namespace ModuleApp
             }
 
             // Optionally, show a message to indicate that the files have been deleted
-            MessageBox.Show("Files have been deleted.");
+            MessageBox.Show("CLEARED.");
             MainWindow mainWindow = new MainWindow();
-            this.Visibility = Visibility.Hidden;
+            this.Visibility = Visibility.Collapsed;
             mainWindow.Close();
+            
         }
 
         private void print(object sender, RoutedEventArgs e)
@@ -130,7 +131,7 @@ namespace ModuleApp
         private void enterSemester(object sender, RoutedEventArgs e)
         {
             SemesterDetails details = new SemesterDetails();
-            this.Visibility = Visibility.Hidden;
+            this.Visibility = Visibility.Collapsed;
             details.Show();
         }
     }

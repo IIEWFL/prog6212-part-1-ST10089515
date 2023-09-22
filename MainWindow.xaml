@@ -13,8 +13,8 @@
                 <GradientStop Color="White" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Label Content="School App" HorizontalAlignment="Left" Margin="18,8,0,0" VerticalAlignment="Top" FontFamily="Arial Black" FontSize="32" Foreground="#FFF9F0F0"/>
-        <Button x:Name="btnEnterM" Content="ENTER NEW MODULE" HorizontalAlignment="Left" Margin="286,126,0,0" VerticalAlignment="Top" Width="175" Click="enterModule">
+        <Label Content="Module.Co" HorizontalAlignment="Left" Margin="270,64,0,0" VerticalAlignment="Top" FontFamily="Arial Black" FontSize="32" Foreground="#FFF9F0F0"/>
+        <Button x:Name="btnEnterM" Content="ENTER NEW MODULE" HorizontalAlignment="Left" Margin="286,154,0,0" VerticalAlignment="Top" Width="175" Click="enterModule">
             <Button.Background>
                 <ImageBrush/>
             </Button.Background>
@@ -35,12 +35,6 @@
             </Button.Background>
         </Button>
         <Button x:Name="btnExit" Content="EXIT" HorizontalAlignment="Left" Margin="286,266,0,0" VerticalAlignment="Top" Width="175" Click="exit" Background="#FFF92525" Foreground="#FFEFE4E4"/>
-        <Button x:Name="btnSemester" Content="ADD SEMESTER&#xD;&#xA;" HorizontalAlignment="Left" Margin="286,154,0,0" VerticalAlignment="Top" Width="175" Click="enterSemester" Height="23">
-            <Button.Background>
-                <ImageBrush/>
-            </Button.Background>
-        </Button>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="662,108,0,0" VerticalAlignment="Top" Width="89" Click="print"/>
 
     </Grid>
 </Window>

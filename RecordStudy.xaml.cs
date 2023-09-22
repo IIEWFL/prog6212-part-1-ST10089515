@@ -97,7 +97,7 @@ namespace ModuleApp
         private void back(object sender, RoutedEventArgs e)
         {
             MainWindow mainWindow = new MainWindow();
-            this.Visibility = Visibility.Hidden;
+            this.Visibility = Visibility.Collapsed;
             mainWindow.Show();
         }
 
@@ -113,7 +113,7 @@ namespace ModuleApp
 
             var date = DateTime.Parse(txtDate.Text);
 
-             date= DateTime.Parse(Date);
+           
 
             double hours = double.Parse(txtHours.Text);
 
@@ -157,7 +157,9 @@ namespace ModuleApp
 
 
 
-
+            MainWindow mainWindow = new MainWindow();
+            this.Visibility = Visibility.Collapsed;
+            mainWindow.Show();
         }
 
 

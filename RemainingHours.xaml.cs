@@ -11,6 +11,7 @@ namespace ModuleApp
     {
         private Functions functions;
         private RecordStudy recordStudy;
+        private SemesterDetails semesterDetails;
         public DateTime DateValue { get; set; }
 
         public RemainingHours() {
@@ -26,7 +27,8 @@ namespace ModuleApp
             this.recordStudy = recordStudy;
             InitializeComponent();
            functions = new Functions();
-           // DateTime startDate = RecordStudy.date;
+            this.semesterDetails = semesterDetails;
+            // DateTime startDate = RecordStudy.date;
 
 
 
@@ -39,6 +41,7 @@ namespace ModuleApp
         private void back(object sender, RoutedEventArgs e)
         {
             MainWindow mainWindow = new MainWindow();
+            this.Visibility = Visibility.Collapsed;
             mainWindow.Show();
         }
 
@@ -48,46 +51,98 @@ namespace ModuleApp
         }
 
         private void display(object sender, RoutedEventArgs e)
-        {    // Calculate and display remaining self-study hours for each module
-            /**
-            DateTime today = DateTime.Today;
-            DateTime startOfWeek = today.AddDays(-(int)today.DayOfWeek);
+        {
+            string searchCode = txtCode.Text;
 
-            // Clear the TextBlock before displaying new information
-            blkDisplay.Text = "";
+            // Read all lines from the "modules.txt" file
+            string filePath = "modules.txt";
+            string[] lines = File.ReadAllLines(filePath);
 
-            // Loop through each module
-            foreach (Module module in Module.modules)
+            bool found = false;
+            List<string> moduleLines = new List<string>(); // Store module lines here
+
+            // Iterate through the lines and check for the search code
+            for (int i = 0; i < lines.Length; i++)
             {
-                double recordedHoursThisWeek = 0.0;
-
-                // Calculate total recorded hours for the current week
-                foreach (Module.StudyRecord record in module.StudyRecords)
+                if (lines[i].Contains($"Module Code: {searchCode}"))
                 {
-                    if (record.Date >= startOfWeek)
+                    found = true;
+                    moduleLines.Add(lines[i]); // Add the line containing the module details
+
+                    // Continue reading lines until the separator "==========" is found
+                    i++; // Move to the next line
+                    while (i < lines.Length && !lines[i].Contains("=========="))
                     {
-                        recordedHoursThisWeek += record.Hours;
+                        moduleLines.Add(lines[i]); // Add the line
+                        i++; // Move to the next line
+                    }
+
+                    break; // Exit the loop once the module is found
+                }
+            }
+
+            // Display a message based on whether the code was found or not
+            if (found)
+            {
+                // Join the module lines into a single string
+                string moduleDetails = string.Join("\n", moduleLines);
+
+                // Extract the remaining hours from the module details
+                double remainingHours = ExtractRemainingHours(moduleDetails);
+
+                // Display the remaining hours in a message box
+                MessageBox.Show($"Remaining Self-Study Hours for Module {searchCode}:\n{remainingHours} hours");
+            }
+            else
+            {
+                MessageBox.Show($"Module Code: {searchCode} not found in the modules file.");
+            }
+        }
+
+        // Helper method to extract remaining hours from module details
+        private double ExtractRemainingHours(string moduleDetails)
+        {
+            // Split the module details by newline character to get individual lines
+            string[] lines = moduleDetails.Split('\n');
+
+            // Loop through the lines to find and extract the remaining hours
+            foreach (string line in lines)
+            {
+                if (line.Contains("Required Self Study Hours:"))
+                {
+                    // Extract the remaining hours value (assuming it's in the format "Required Self Study Hours: {hours}")
+                    string[] parts = line.Split(':');
+                    if (parts.Length == 2 && double.TryParse(parts[1].Trim(), out double remainingHours))
+                    {
+                        string code = txtCode.Text;
+                        double hours = double.Parse(txtHours.Text);
+                        double final = remainingHours - hours;
+
+                        blkDisplay.Text = "Remaining Hours for:\n"+  code  +"is:\n"+ final;
+
+                        return remainingHours;
                     }
                 }
+            }
 
-                // Calculate remaining self-study hours for the current week
-                double remainingHoursThisWeek = (module.Credits * 10.0) - recordedHoursThisWeek;
+            // Return a default value if remaining hours are not found
+            return 0.0;
 
-                // Display information in the TextBlock
-                blkDisplay.Text += $"Module Code: {module.Code}, Name: {module.Name}, Remaining self-study hours this week: {remainingHoursThisWeek}\n";
-            }**/
-
-
-
+            MessageBox.Show("WHEN DONE ,PLEASE CLICK ON EXIT!");
+        
         }
+
+
+
+
+
 
         private void search(object sender, RoutedEventArgs e)
         {
             string filePath = "modules.txt";
             string searchCode = txtCode.Text;
 
-            string dateStr = txtDate.Text;
-            DateTime date;
+            
 
          
 
@@ -111,7 +166,9 @@ namespace ModuleApp
                 // Display a message based on whether the code was found or not
                 if (found)
                 {
-                    MessageBox.Show($"Module Code: {searchCode} found in the 'modules.txt' file.");
+                    MessageBox.Show($"Module Code: {searchCode} found in the modules.");
+
+
 
 
 
@@ -123,7 +180,7 @@ namespace ModuleApp
                 }
                 else
                 {
-                    MessageBox.Show($"Module Code: {searchCode} not found in the 'modules.txt' file.");
+                    MessageBox.Show($"Module Code: {searchCode} not found in the modules file.");
                 }
             
            
@@ -134,10 +191,7 @@ namespace ModuleApp
 
         private void save(object sender, RoutedEventArgs e)
         {
-           int date = int.Parse(txtDate.Text);
-           int kops = functions.module.ClassHoursPerWeek;
-
-           int final = kops - kops;
+           
            
 
 

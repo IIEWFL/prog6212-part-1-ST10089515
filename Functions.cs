@@ -39,6 +39,7 @@ namespace ModuleApp
                 Code = code;
                 Credits = credits;
                 ClassHoursPerWeek = classHours;
+                StudyHoursPerDay = new List<double>();
                 this.StudyHoursPerDay = StudyHoursPerDay;
 
                 modules = new List<Module>();
