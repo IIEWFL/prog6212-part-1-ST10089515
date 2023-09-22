@@ -1,4 +1,0 @@
-MODULE DETAILS:
-Module Code: Mo112, Name: Motjoka, Credits: Motjoka, Class Hours: 2
-Required Self Study Hours:0
-=====================================================================================================
